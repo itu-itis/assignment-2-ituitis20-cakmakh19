@@ -1,0 +1,230 @@
+  
+		 .view
+		 { display: none; }
+		 :target
+		 { 
+			 display: block;
+		 }
+		 
+			 body {
+    background-color: mintcream;
+    
+}
+.menubar{
+    font-size:50px;
+    padding-top: 10px;
+    
+    
+}
+
+nav {
+    background: mintcream;
+    height: 200px;
+}
+
+
+nav ul{
+    float:right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+nav ul li{
+    float: left;
+    display: block;
+    background:darkolivegreen;
+    margin: 0 5px;
+    position: relative;
+    border-radius: 10px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height:  55px;
+    font-size: 15px;
+    padding: 0px 15px;
+    display: block;
+}
+nav ul li a:hover {
+    color: cadetblue
+}
+nav ul li ul {
+    position: absolute;
+    background: mintcream;
+    width 100px;
+    border-radius: 20px;
+    padding: 15px 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms;
+    
+}
+nav ul li ul:before{
+    content: "";
+    border-bottom: 6px solid #333;
+    border-top: 6px solid transparent;
+    border-left: 6px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    right: 50%;
+    transform:  translate(-50%);
+}
+nav ul li ul li {
+ 
+    list-style: none;
+    
+    
+}
+nav ul li ul li a {
+    
+    text-decoration: none;
+    color: white;
+    font-size:13px;
+    display: block;
+    padding-left: 20px;
+}
+nav ul li ul li a:hover {
+    color: cadetblue
+    
+}
+nav ul li:hover ul {
+  opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+ table {
+  font-family: sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  border: 1px solid black;
+
+  
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: darkseagreen;
+}
+
+
+p{
+    width: 1000px;
+    font-family:inherit;
+    padding-left: 10px;
+    
+}
+h2{
+    border-style: inset;
+    padding-left: 10px;
+    border-radius: 20px;
+    color:darkolivegreen;
+     font-size: 35px;
+    text-align: center;
+    
+}
+.ornek{
+width: 900px;
+ padding-bottom: 40px;
+
+}
+.sağ{
+float:right;
+
+}
+
+.onyazi{
+    font-size: 18px;
+    font-family:sans-serif;
+}
+
+ 
+}
+
+.giris {
+    padding-left: 30px;
+    font-size: 30px;
+}
+h4{
+    font-size: 23px;
+}
+pre {
+    text-align: center;
+    font-size:20px;
+}
+h3{
+    text-align: center;
+    border-style: inset;
+    padding-left: 10px;
+    border-radius: 10px;
+    color:darkolivegreen;
+    font-size:35px;
+   display: table;
+}
+h5 { 
+font-size: 20px;}
+.yazı{
+    
+    width: 1050px;
+    display: block;
+    border: 5px dotted darkolivegreen;
+    border-radius: 10px;
+   border-spacing: inherit;
+   
+    background-color: mintcream;
+    text-align: center
+  
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    margin: auto;
+}
+footer {
+    background-color: darkolivegreen;
+    color:black;
+    border: 1px solid darkolivegreen;
+    font-size: 17px;
+   
+   
+     text-align: center
+}
+
+.pp{font-size:25px;}
+
+
+.resim {
+
+ 
+  text-align:center;
+  padding-top:30px;
+  
+  
+
+}
+#spor1{border: 3px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 600px;}
+.text {
+font-size:50px; 
+text-align:center;
+padding-top:30px;
+font-family: sans-serif;
+ }
+#music1 {border: 3px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 600px; }
+			 
+      
+      
