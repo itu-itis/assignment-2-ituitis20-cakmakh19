@@ -1,4 +1,7 @@
   
+  
+  
+
 		 .view
 		 { display: none; }
 		 :target
@@ -225,6 +228,12 @@ font-family: sans-serif;
   border-radius: 4px;
   padding: 5px;
   width: 600px; }
+#center { 
+float:right;
+padding-right:400px;
+}
 			 
-      
+ #firstt{ 
+ float:right;
+ padding-right:300px;}
       
