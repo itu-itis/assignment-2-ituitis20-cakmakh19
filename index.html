@@ -187,17 +187,117 @@ Fax: 0 (224) 244 90 66
  <footer> Warning:This website is prepared for homework </footer> 
  </div>
 <div id="sports"  class="view">
-	<h1>Öğretmen</h1>
-	<table border="1">
-		<tbody>
-		<tr>
-			<th>Name</th>
-			<th>DERS</th>
-			<th>Bra</th>
-		</tr>
-		</tbody>
-	</table>
-	<input type="text" name="tname" id="tname">
+	<h2>Sports Activity</h2>
+ <div class="yazı"><p >
+
+There are many awards at the entrance of school and many efforts behind those awards. Football, basketball, swimming, volleyball, folklore teams receive awards from the province and country, and even worldwide. Students can join the team they want, participate in training and improve themselves.
+
+
+
+
+     </p></div>
+     <div class="text">Football Team</div>
+    <div class="resim"><img  id="spor1" src="BEBB6149.JPG"   width="600" height="450"
+  
+                        alt="image of sports">
+                        
+                        
+                       
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                
+                
+                
+    
+    
+
+     <footer> Warning:This website is prepared for homework </footer> 
+    
+
+    
+	</div>
+	<div id="music" class="view">
+		<h2>Music Activity</h2>
+  <div class="yazı">  <p >
+There are many talented people in our school.  The orchestra made up of people who play instruments and sing beautifully.  Mr. Ibrahim, who led this orchestra, and the students received many awards from around the world.  Our orchestra, which has performed in belgrade, italy, bulgaria, romania and many other countries, has a lot of awards.
+
+
+
+
+
+      </p> </div>
+      <div class="text">Tan  Orchestra</div>
+<div class="resim"><img  id="music1" width="600" height="450" src="grup.png" alt="image of Music"> </div>   
+<br>
+<br>
+<br>
+
+    
+     <footer> Warning:This website is prepared for homework </footer>
+    
+	
+	
+	
+	
+	</div>
+	<div id="List" class="view">
+	
+	
+	<table border="1" id="tablo1">
+            
+            <tr>
+                <th>Teacher Name</th>
+                <th>Subject</th>
+                <th>Cluster</th>
+            </tr>
+        </table>
+        
+        <div id="form1">
+	
+        Teacher Name: <input type="text" name="tname" id="tname" />
+        Subject: <select class="seçenek" name="subject" id="subject">
+			<option>Physic</option>
+         <option>Chemistry</option>
+         <option>Math</option>
+         <option>Turkish</option>
+         <option>English</option>
+		 </select>
+        
+         Cluster:<select class="seçenek" name="cluster" id="cluster">
+         <option>SAY</option>
+         <option>SOZ</option>
+         <option>EA</option>
+         <option>DIL</option>
+		 </select>
+         <button onclick="addRow();">Add</button>
+	</div>
+	<script>
+		  function addRow() {
+           
+
+            var table = document.getElementById("tablo1");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");    
+
+            var row= document.createElement("tr");
+            td1.innerHTML = document.getElementById("tname").value;
+            td2.innerHTML  = document.getElementById("subject").value;
+            td3.innerHTML  = document.getElementById("cluster").value;
+            row.appendChild(td1);
+            row.appendChild(td2);
+            row.appendChild(td3);
+
+            table.children[0].appendChild(row);
+
+        }
+        </script>
+	
+	
+	
+	
 	</div>
 
     </body>
