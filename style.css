@@ -1,15 +1,28 @@
   
-  
-  
+  body > div { display: none ; }
+.home{
+	display:block;
+}
 
-		 .view
-		 { display: none; }
-		 :target
-		 { 
-			 display: block;
-		 }
-		 
-			 body {
+:target~div{
+	display:none;
+}
+
+  
+  #home:target ~ .home,
+  #vision:target ~ .vision,
+  #our:target ~ .our,
+  #sports:target ~ .sports,
+  #aboutme:target ~ .aboutme,
+  #music:target ~ .music,
+  #List:target ~ .List{
+	display: block;
+}
+
+    
+   
+    
+		body {
     background-color: mintcream;
     
 }
@@ -236,4 +249,7 @@ padding-right:400px;
  #firstt{ 
  float:right;
  padding-right:300px;}
+
+ #form1 { display:none;}
+	#form2 { display:none; }
       

@@ -4,6 +4,7 @@
 <head> 
  <meta charset="UTF-8">
  
+ 
            <title>Tan Highscool </title>
  <link rel="stylesheet" href="style.css">
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
@@ -26,10 +27,9 @@
 
      
    
-		 <ul><li>
-    <a href="#home" >Home</a></li>
+	  <ul><li><a  href="#home" >Home</a></li>
      
-         <li><a href="#vision" > Our Vision and Mission</a> </li>
+         <li><a  href="#vision" > Our Vision and Mission</a> </li>
 
     <li><a href="#">School Activity</a> <ul>
      <li ><a href="#sports" class="nav-links-item"> Sports </a></li>
@@ -45,12 +45,19 @@
     <li><a href="#aboutme" class="nav-links-item">About Me</a></li>
     <li><a href="#List">Teacher and Sports Team List</a></li>
     
-    
-  
+   
     
 
     </ul>
+  
     </nav>
+     <a id="home"></a>
+   <a id="vision"></a>
+   <a id="our"></a>
+   <a id="sports"></a>
+   <a id="music"></a>
+   <a id="aboutme"></a>
+   <a id="List"></a>
      <br>
     <br>
     <br>
@@ -60,9 +67,9 @@
     <br>
    
   
+ 
     
-    
-    <div id="home"  class="view">
+    <div  class="home" >
 		
 		<h2>About Us</h2>
     <div class="yazı"><p>In 1973 Tan Highschool was opened as a private teaching institution, which turned into high school. Tan High School is prioring "experience, research, conclusion" and named by those.Nowadays, with experienced teachers, rooted past continues to train her students.This education give rise to succesful, more importantly, qualified individuals who have adopted Atatürk's principles.As you can see on our website; We have set our goal to raise versatile individuals such as music, sports and painting. </p></div>
@@ -92,7 +99,8 @@ Fax: 0 (224) 244 90 66
   
     
     </div>
-   <div id="vision"  class="view">
+  
+   <div  class="vision" >
     <h2>Our Vision</h2>
     <div class="yazı"><p >To be one of the Turkey's most succesfull school.</p></div>
     <br>
@@ -111,7 +119,7 @@ Fax: 0 (224) 244 90 66
      <footer> Warning:This website is prepared for homework </footer>
    
     </div>
-  <div id="our"  class="view">
+  <div class="our"  >
 	  <h2>Our Achivements</h2>
 
   <div class="yazı">  <p >
@@ -186,7 +194,7 @@ Fax: 0 (224) 244 90 66
     
  <footer> Warning:This website is prepared for homework </footer> 
  </div>
-<div id="sports"  class="view">
+<div  class="sports" >
 	<h2>Sports Activity</h2>
  <div class="yazı"><p >
 
@@ -218,7 +226,7 @@ There are many awards at the entrance of school and many efforts behind those aw
 
     
 	</div>
-	<div id="music" class="view">
+	<div  class="music">
 		<h2>Music Activity</h2>
   <div class="yazı">  <p >
 There are many talented people in our school.  The orchestra made up of people who play instruments and sing beautifully.  Mr. Ibrahim, who led this orchestra, and the students received many awards from around the world.  Our orchestra, which has performed in belgrade, italy, bulgaria, romania and many other countries, has a lot of awards.
@@ -242,10 +250,30 @@ There are many talented people in our school.  The orchestra made up of people w
 	
 	
 	</div>
-	<div id="List" class="view">
+	<div  class="aboutme">
 	
 	
-	<table border="1" id="tablo1">
+	 <p style=" font-size:25px">Hello,I am Hüseyin Anıl Çakmak.I am interesting in playing basketball and watching match. This is my first year in this department so I am very excited.Maybe I made few mistakes when I prepared this website , sorry about that.But I believe I can be  successful in this course.Here some my gimp projes;
+    </p>
+    
+    <img src="IMG_1787.JPG"  width="600" height="800" alt="me">
+   <img src="IMG_1787.jpg2"  width="600" height="800" alt="me1">
+    <img src="IMG_6864-ilk-hali.jpg "  width="800" height="400" alt="proje1">
+    <img src="IMG_6864.jpg"  width="800" height="400" alt="proje2">
+    <br>
+    <br>
+    <br>
+    <br>
+     <footer> Warning:This website is prepared for homework </footer>
+	
+	
+	</div>
+	
+	<div  class="List">
+	
+	
+	teachers:
+        <table border="1" id="table1">
             
             <tr>
                 <th>Teacher Name</th>
@@ -253,8 +281,21 @@ There are many talented people in our school.  The orchestra made up of people w
                 <th>Cluster</th>
             </tr>
         </table>
-        
-        <div id="form1">
+    Sports Team:
+		 <table border="1" id="table2">
+		   <tr>
+                <th>Sports Type</th>
+                <th>Team Name</th>
+            </tr>
+         </table>  
+         <button onclick="showAddTeacher()">Add Teacher</button>
+         <button onclick="showAddTeam()">Add Team</button>
+         
+         
+         
+          <br><br>
+		
+	<div id="form1">
 	
         Teacher Name: <input type="text" name="tname" id="tname" />
         Subject: <select class="seçenek" name="subject" id="subject">
@@ -273,19 +314,43 @@ There are many talented people in our school.  The orchestra made up of people w
 		 </select>
          <button onclick="addRow();">Add</button>
 	</div>
+	<div id="form2">
+    
+         Sport Type:
+         <select class="seçenek" name="sportstype" id="sportstype">
+         <option>Football</option>
+         <option>Basketball</option>
+         <option>Voleyball</option>
+         <option>Handball</option>
+		 </select>
+		 Team Name: <input type="text" name="teamname" id="teamname" />
+		 <button onclick="addRow2();">Add</button>
+	 
+	</div>
 	<script>
+		 function showAddTeacher(){
+			 document.getElementById('form2').style.display='none';
+			 document.getElementById('form1').style.display='block';
+		 }
+			 
+         function showAddTeam(){
+			 document.getElementById('form1').style.display='none';
+			 document.getElementById('form2').style.display='block';
+		 }
+		
+		
 		  function addRow() {
            
 
-            var table = document.getElementById("tablo1");
+            var table = document.getElementById("table1");
             var td1 = document.createElement("td");
             var td2 = document.createElement("td");
             var td3 = document.createElement("td");    
 
             var row= document.createElement("tr");
-            td1.innerHTML = document.getElementById("tname").value;
-            td2.innerHTML  = document.getElementById("subject").value;
-            td3.innerHTML  = document.getElementById("cluster").value;
+            row.insertCell(0).innerHTML = document.getElementById("tname").value;
+           row.insertCell(1).innerHTML  = document.getElementById("subject").value;
+           row.insertCell(2).innerHTML = document.getElementById("cluster").value;
             row.appendChild(td1);
             row.appendChild(td2);
             row.appendChild(td3);
@@ -293,13 +358,29 @@ There are many talented people in our school.  The orchestra made up of people w
             table.children[0].appendChild(row);
 
         }
-        </script>
-	
+		 function addRow2() {
+            
+
+            var table = document.getElementById("table2");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+                
+
+            var row= document.createElement("tr");
+            td1.innerHTML = document.getElementById("sportstype").value;
+            td2.innerHTML  = document.getElementById("teamname").value;
+            row.appendChild(td1);
+            row.appendChild(td2);
+
+            table.children[0].appendChild(row);
+
+        }
+	</script>
 	
 	
 	
 	</div>
-
+</div>
     </body>
     </html>
     
