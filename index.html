@@ -272,7 +272,7 @@ There are many talented people in our school.  The orchestra made up of people w
 	<div  class="List">
 	
 	
-	teachers:
+	<h2>Teachers:</h2>
         <table border="1" id="table1">
             
             <tr>
@@ -281,15 +281,16 @@ There are many talented people in our school.  The orchestra made up of people w
                 <th>Cluster</th>
             </tr>
         </table>
-    Sports Team:
+        <button class="tuş" onclick="showAddTeacher()">Add Teacher</button>
+    <h2>Sports Team:</h2>
 		 <table border="1" id="table2">
 		   <tr>
                 <th>Sports Type</th>
                 <th>Team Name</th>
             </tr>
          </table>  
-         <button onclick="showAddTeacher()">Add Teacher</button>
-         <button onclick="showAddTeam()">Add Team</button>
+        
+         <button  class="tuş" onclick="showAddTeam()">Add Team</button>
          
          
          
@@ -297,8 +298,8 @@ There are many talented people in our school.  The orchestra made up of people w
 		
 	<div id="form1">
 	
-        Teacher Name: <input type="text" name="tname" id="tname" />
-        Subject: <select class="seçenek" name="subject" id="subject">
+        <label>Teacher Name:</label> <input type="text" name="tname" id="tname" />
+        <label>Subject: </label><select class="seçenek" name="subject" id="subject">
 			<option>Physic</option>
          <option>Chemistry</option>
          <option>Math</option>
@@ -306,27 +307,28 @@ There are many talented people in our school.  The orchestra made up of people w
          <option>English</option>
 		 </select>
         
-         Cluster:<select class="seçenek" name="cluster" id="cluster">
+         <label>Cluster:</label><select class="seçenek" name="cluster" id="cluster">
          <option>SAY</option>
          <option>SOZ</option>
          <option>EA</option>
          <option>DIL</option>
 		 </select>
-         <button onclick="addRow();">Add</button>
+         <button  class="tuş" onclick="addTeacher();">Add</button>
 	</div>
 	<div id="form2">
     
-         Sport Type:
+         <label>Sport Type:</label>
          <select class="seçenek" name="sportstype" id="sportstype">
          <option>Football</option>
          <option>Basketball</option>
          <option>Voleyball</option>
          <option>Handball</option>
 		 </select>
-		 Team Name: <input type="text" name="teamname" id="teamname" />
-		 <button onclick="addRow2();">Add</button>
+		 <label>Team Name:</label> <input type="text" name="teamname" id="teamname" />
+		 <button  class="tuş"onclick="addTeam();">Add</button>
 	 
 	</div>
+	<hr>
 	<script>
 		 function showAddTeacher(){
 			 document.getElementById('form2').style.display='none';
@@ -339,7 +341,7 @@ There are many talented people in our school.  The orchestra made up of people w
 		 }
 		
 		
-		  function addRow() {
+		  function addTeacher() {
            
 
             var table = document.getElementById("table1");
@@ -358,7 +360,7 @@ There are many talented people in our school.  The orchestra made up of people w
             table.children[0].appendChild(row);
 
         }
-		 function addRow2() {
+		 function addTeam() {
             
 
             var table = document.getElementById("table2");
