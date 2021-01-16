@@ -297,6 +297,7 @@ There are many talented people in our school.  The orchestra made up of people w
           <br><br>
 		
 	<div id="form1">
+		<form id="form3">
 	
 	
 		
@@ -310,13 +311,16 @@ There are many talented people in our school.  The orchestra made up of people w
          <option>EA</option>
          <option>DIL</option>
 		 </select>
-         <button  class="tuş" onclick="addTeacher();">Add</button>
+         <input type="button"  value="Add" class="tuş" onclick="addTeacher();"></input>
+         
          
         
         
         
+	</form>
 	</div>
 	<div id="form2">
+	<form id="form4">
 	
     
          <label>Sport Type:</label>
@@ -327,29 +331,35 @@ There are many talented people in our school.  The orchestra made up of people w
          <option>Handball</option>
 		 </select>
 		 <label>Team Name:</label> <input type="text" name="teamname" id="teamname" />
-		 <button  class="tuş"onclick="addTeam();">Add</button>
+		 <input type="button" value="Add"onclick="addTeam();"></button>
 		 
 	 
+	</form>
 	</div>
 	<hr>
 	<script>
 		
 		 function showAddTeacher(){
-			
-			 document.getElementById('form2').style.display='none';
-			 document.getElementById('form1').style.display='block'; 
+			document.getElementById('form2').style.display='none';
+			 document.getElementById('form1').style.display='block';
 		 }
-		  
-		 
 			 
          function showAddTeam(){
-			 document.getElementById('form1').style.display='none';
-			 document.getElementById('form2').style.display='block';
+			document.getElementById('form1').style.display='none';
+			 document.getElementById('form2').style.display='block'; 
 		 }
+			
 		
+	
 		
 		  function addTeacher() {
-           
+           var  ttname = document.getElementById("tname").value
+		var ttsubject = document.getElementById("subject").value
+           if(ttname.length == 0 || ttsubject.length == 0 )
+			 { alert("alert"); }
+			
+			else {
+				
 
             var table = document.getElementById("table1");
             var td1 = document.createElement("td");
@@ -362,18 +372,21 @@ There are many talented people in our school.  The orchestra made up of people w
            row.insertCell(2).innerHTML = document.getElementById("cluster").value;
             
 
-         
-           table.children[0].appendChild(row);
-            document.getElementById("tname").value=' ';
-            document.getElementById("subject").value=' ';
-            document.getElementById("cluster").value=' ';
+             table.children[0].appendChild(row);
+            
+             document.getElementById("form3").reset(); }
 
         }
         
        
         
 		 function addTeam() {
-            
+			 
+            var  ttsport = document.getElementById("teamname").value
+            if(ttsport.length == 0 )
+			 { alert("check teamname"); }
+			
+			else {
 
             var table = document.getElementById("table2");
             var td1 = document.createElement("td");
@@ -381,14 +394,12 @@ There are many talented people in our school.  The orchestra made up of people w
                 
 
             var row= document.createElement("tr");
-            td1.innerHTML = document.getElementById("sportstype").value;
-            td2.innerHTML  = document.getElementById("teamname").value;
-            row.appendChild(td1);
-            row.appendChild(td2);
+            row.insertCell(0).innerHTML = document.getElementById("sportstype").value;
+            row.insertCell(1).innerHTML  = document.getElementById("teamname").value;
+            
 
             table.children[0].appendChild(row);
-            document.getElementById("sportstype").value=' ';
-            document.getElementById("teamname").value=' ';
+          document.getElementById("form4").reset(); }
             
 
         }
