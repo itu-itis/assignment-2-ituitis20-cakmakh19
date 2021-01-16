@@ -298,24 +298,20 @@ There are many talented people in our school.  The orchestra made up of people w
 		
 	<div id="form1">
 	
+	
 		
 	
-        <label>Teacher Name:</label> <input type="text" name="tname" id="tname" />
-        <label>Subject: </label><select class="seçenek" name="subject" id="subject">
-			<option>Physic</option>
-         <option>Chemistry</option>
-         <option>Math</option>
-         <option>Turkish</option>
-         <option>English</option>
-		 </select>
+        <label>Teacher Name:</label> <input type="text"  id="tname" />
+        <label>Subject: </label><input type="text"  id="subject" />
         
-         <label>Cluster:</label><select class="seçenek" name="cluster" id="cluster">
+         <label>Cluster:</label><select class="seçenek"  id="cluster">
          <option>SAY</option>
          <option>SOZ</option>
          <option>EA</option>
          <option>DIL</option>
 		 </select>
          <button  class="tuş" onclick="addTeacher();">Add</button>
+         
         
         
         
@@ -337,9 +333,11 @@ There are many talented people in our school.  The orchestra made up of people w
 	</div>
 	<hr>
 	<script>
+		
 		 function showAddTeacher(){
+			
 			 document.getElementById('form2').style.display='none';
-			 document.getElementById('form1').style.display='block';
+			 document.getElementById('form1').style.display='block'; 
 		 }
 		  
 		 
@@ -364,10 +362,16 @@ There are many talented people in our school.  The orchestra made up of people w
            row.insertCell(2).innerHTML = document.getElementById("cluster").value;
             
 
-            table.children[0].appendChild(row);
-            document.getElementByID("form1").reset();
+         
+           table.children[0].appendChild(row);
+            document.getElementById("tname").value=' ';
+            document.getElementById("subject").value=' ';
+            document.getElementById("cluster").value=' ';
 
         }
+        
+       
+        
 		 function addTeam() {
             
 
@@ -383,6 +387,8 @@ There are many talented people in our school.  The orchestra made up of people w
             row.appendChild(td2);
 
             table.children[0].appendChild(row);
+            document.getElementById("sportstype").value=' ';
+            document.getElementById("teamname").value=' ';
             
 
         }
