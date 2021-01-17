@@ -27,13 +27,13 @@
 
      
    
-	  <ul><li><a  href="#home" >Home</a></li>
+	 <ul><li><a  href="#home" >Home</a></li>
      
          <li><a  href="#vision" > Our Vision and Mission</a> </li>
 
-    <li><a href="#">School Activity</a> <ul>
-     <li ><a href="#sports" class="nav-links-item"> Sports </a></li>
-         <li ><a href="#music" class="nav-links-item">Music</a>
+    <li class="drop">School Activity <ul>
+     <li ><a href="#sports" > Sports </a></li>
+         <li ><a href="#music" >Music</a>
          </ul>
          </li> 
         
@@ -41,8 +41,8 @@
          
        
     
-    <li><a href="#our" class="nav-links-item" > Our Achievement</a> </li>
-    <li><a href="#aboutme" class="nav-links-item">About Me</a></li>
+    <li><a href="#our"  > Our Achievement</a> </li>
+    <li><a href="#aboutme" >About Me</a></li>
     <li><a href="#List">Teacher and Sports Team List</a></li>
     
    
@@ -91,7 +91,7 @@ Fax: 0 (224) 244 90 66
 
 </pre>
 
-</section>
+
 <br>
    
    
@@ -272,8 +272,8 @@ There are many talented people in our school.  The orchestra made up of people w
 	<div  class="List">
 	
 	
-	<h2>Teachers:</h2>
-        <table border="1" id="table1">
+	<h2>Teachers</h2>
+        <table class="tablaa" id="table1">
             
             <tr>
                 <th>Teacher Name</th>
@@ -281,14 +281,18 @@ There are many talented people in our school.  The orchestra made up of people w
                 <th>Cluster</th>
             </tr>
         </table>
+        <br>
+        <br>
       <button class="tuş" onclick="showAddTeacher()">Add Teacher</button>
-    <h2>Sports Team:</h2>
-		 <table border="1" id="table2">
+    <h2>Sports Team</h2>
+		 <table class="tablaa" id="table2">
 		   <tr>
                 <th>Sports Type</th>
                 <th>Team Name</th>
             </tr>
          </table>  
+         <br>
+         <br>
     
          <button  class="tuş" onclick="showAddTeam()">Add Team</button>
          
@@ -298,6 +302,7 @@ There are many talented people in our school.  The orchestra made up of people w
 		
 	<div id="form1">
 		<form id="form3">
+			
 	
 	
 		
@@ -311,7 +316,9 @@ There are many talented people in our school.  The orchestra made up of people w
          <option>EA</option>
          <option>DIL</option>
 		 </select>
-         <input type="button"  value="Add" class="tuş" onclick="addTeacher();"></input>
+		 
+         <input type="button" class="tuş"   value="Add"  onclick="addTeacher();"></input>
+         <br><br><br><br><br><br><br><br>
          
          
         
@@ -321,8 +328,8 @@ There are many talented people in our school.  The orchestra made up of people w
 	</div>
 	<div id="form2">
 	<form id="form4">
-	
-    
+	   
+	   
          <label>Sport Type:</label>
          <select class="seçenek" name="sportstype" id="sportstype">
          <option>Football</option>
@@ -331,22 +338,35 @@ There are many talented people in our school.  The orchestra made up of people w
          <option>Handball</option>
 		 </select>
 		 <label>Team Name:</label> <input type="text" name="teamname" id="teamname" />
-		 <input type="button" value="Add"onclick="addTeam();"></button>
+		 
+		 <input type="button" class="tuş" value="Add" onclick="addTeam();"> </input>
+		 <br><br><br><br><br><br><br><br>
+		
 		 
 	 
 	</form>
+	
 	</div>
-	<hr>
+	
+	
 	<script>
 		
 		 function showAddTeacher(){
-			document.getElementById('form2').style.display='none';
-			 document.getElementById('form1').style.display='block';
-		 }
-			 
+			if(document.getElementById("form1").style.display == "block"){
+				document.getElementById("form1").style.display ="none";
+			    document.getElementById("form2").style.display = "none";   }
+			    else{
+					document.getElementById("form1").style.display = "block";
+					document.getElementById("form2").style.display ="none"; }
+				}
          function showAddTeam(){
-			document.getElementById('form1').style.display='none';
-			 document.getElementById('form2').style.display='block'; 
+			
+			if(document.getElementById("form2").style.display == "block"){
+				document.getElementById("form2").style.display = "none";
+			    document.getElementById("form1").style.display = "none";   }
+			    else{
+					document.getElementById("form2").style.display = "block";
+					document.getElementById("form1").style.display = "none"; }
 		 }
 			
 		
@@ -354,20 +374,21 @@ There are many talented people in our school.  The orchestra made up of people w
 		
 		  function addTeacher() {
            var  ttname = document.getElementById("tname").value
-		var ttsubject = document.getElementById("subject").value
+		   var ttsubject = document.getElementById("subject").value
            if(ttname.length == 0 || ttsubject.length == 0 )
-			 { alert("alert"); }
+			 { alert("Invalid Information"); }
 			
 			else {
 				
 
-            var table = document.getElementById("table1");
-            var td1 = document.createElement("td");
-            var td2 = document.createElement("td");
-            var td3 = document.createElement("td");    
-
-            var row= document.createElement("tr");
-            row.insertCell(0).innerHTML = document.getElementById("tname").value;
+            
+            
+            
+              var table = document.getElementById("table1");
+              var row= document.createElement("tr");
+          
+            
+           row.insertCell(0).innerHTML = document.getElementById("tname").value;
            row.insertCell(1).innerHTML  = document.getElementById("subject").value;
            row.insertCell(2).innerHTML = document.getElementById("cluster").value;
             
@@ -384,15 +405,11 @@ There are many talented people in our school.  The orchestra made up of people w
 			 
             var  ttsport = document.getElementById("teamname").value
             if(ttsport.length == 0 )
-			 { alert("check teamname"); }
+			 { alert("Invalid Information"); }
 			
 			else {
 
             var table = document.getElementById("table2");
-            var td1 = document.createElement("td");
-            var td2 = document.createElement("td");
-                
-
             var row= document.createElement("tr");
             row.insertCell(0).innerHTML = document.getElementById("sportstype").value;
             row.insertCell(1).innerHTML  = document.getElementById("teamname").value;
@@ -406,9 +423,9 @@ There are many talented people in our school.  The orchestra made up of people w
 	</script>
 	
 	
-	
+	<footer> Warning:This website is prepared for homework </footer>
 	</div>
-</div>
+
     </body>
     </html>
     

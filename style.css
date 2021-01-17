@@ -253,9 +253,32 @@ padding-right:400px;
  #form1 { display:none;}
 	#form2 { display:none; }
       .tuş { 
-      background-color:iceblue;
-      font-size: 16px;
+      background-color: #afcfaf;
+      font-size: 20px;
       border-radius: 5px;
+    
+      
       } 
       .tuş:hover {
-      color:blue; }
+      color:white; }
+.tablaa{  border:3px solid black;
+width: 1200px;
+margin: 20px auto;
+
+
+}
+#form1  { text-align:center;
+
+}
+#form2 { text-align:center; }
+.drop {  color: white;
+    text-decoration: none;
+    line-height:  55px;
+    font-size: 15px;
+    padding: 0px 15px;
+    display: block;
+}
+
+
+
+
