@@ -307,17 +307,17 @@ There are many talented people in our school.  The orchestra made up of people w
 	
 		
 	
-        <label>Teacher Name:</label> <input type="text"  id="tname" />
-        <label>Subject: </label><input type="text"  id="subject" />
+        <label class="dolgu">Teacher Name:</label> <input type="text"  id="tname" />
+        <label class="dolgu">Subject: </label><input type="text"  id="subject" />
         
-         <label>Cluster:</label><select class="seçenek"  id="cluster">
+         <label class="dolgu">Cluster:</label><select class="seçenek"  id="cluster">
          <option>SAY</option>
          <option>SOZ</option>
          <option>EA</option>
          <option>DIL</option>
 		 </select>
 		 
-         <input type="button" class="tuş"   value="Add"  onclick="addTeacher();"></input>
+         <input type="button" class="tus"   value="Add"  onclick="addTeacher();">
          <br><br><br><br><br><br><br><br>
          
          
@@ -330,16 +330,16 @@ There are many talented people in our school.  The orchestra made up of people w
 	<form id="form4">
 	   
 	   
-         <label>Sport Type:</label>
+         <label class="dolgu">Sport Type:</label>
          <select class="seçenek" name="sportstype" id="sportstype">
          <option>Football</option>
          <option>Basketball</option>
          <option>Voleyball</option>
          <option>Handball</option>
 		 </select>
-		 <label>Team Name:</label> <input type="text" name="teamname" id="teamname" />
+		 <label class="dolgu">Team Name:</label> <input type="text" name="teamname" id="teamname" />
 		 
-		 <input type="button" class="tuş" value="Add" onclick="addTeam();"> </input>
+		 <input type="button" class="tus" value="Add" onclick="addTeam();"> 
 		 <br><br><br><br><br><br><br><br>
 		
 		 
@@ -388,9 +388,9 @@ There are many talented people in our school.  The orchestra made up of people w
               var row= document.createElement("tr");
           
             
-           row.insertCell(0).innerHTML = document.getElementById("tname").value;
-           row.insertCell(1).innerHTML  = document.getElementById("subject").value;
-           row.insertCell(2).innerHTML = document.getElementById("cluster").value;
+              row.insertCell(0).innerHTML = document.getElementById("tname").value;
+              row.insertCell(1).innerHTML  = document.getElementById("subject").value;
+              row.insertCell(2).innerHTML = document.getElementById("cluster").value;
             
 
              table.children[0].appendChild(row);
