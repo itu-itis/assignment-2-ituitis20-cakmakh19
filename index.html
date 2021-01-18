@@ -284,6 +284,36 @@ There are many talented people in our school.  The orchestra made up of people w
         <br>
         <br>
       <button class="tuş" onclick="showAddTeacher()">Add Teacher</button>
+      <br><br><br>
+      
+      <div id="form1">
+		<form id="form3">
+			
+	
+	
+		
+	
+        <label for="tname" class="dolgu">Teacher Name:</label> <input type="text"  id="tname" />
+        <label for="subject" class="dolgu">Subject: </label><input type="text"  id="subject" />
+        
+         <label for="cluster" class="dolgu">Cluster:</label><select class="seçenek"  id="cluster">
+         <option>SAY</option>
+         <option>SOZ</option>
+         <option>EA</option>
+         <option>DIL</option>
+		 </select>
+		 
+         <input type="button" class="tus"   value="Add"  onclick="addTeacher();">
+         <br><br><br><br><br><br><br><br>
+         
+         
+        
+        
+        
+	</form>
+	</div>
+      
+      
     <h2>Sports Team</h2>
 		 <table class="tablaa" id="table2">
 		   <tr>
@@ -300,47 +330,23 @@ There are many talented people in our school.  The orchestra made up of people w
          
           <br><br>
 		
-	<div id="form1">
-		<form id="form3">
-			
 	
-	
-		
-	
-        <label class="dolgu">Teacher Name:</label> <input type="text"  id="tname" />
-        <label class="dolgu">Subject: </label><input type="text"  id="subject" />
-        
-         <label class="dolgu">Cluster:</label><select class="seçenek"  id="cluster">
-         <option>SAY</option>
-         <option>SOZ</option>
-         <option>EA</option>
-         <option>DIL</option>
-		 </select>
-		 
-         <input type="button" class="tus"   value="Add"  onclick="addTeacher();">
-         <br><br><br><br><br><br><br><br>
-         
-         
-        
-        
-        
-	</form>
-	</div>
 	<div id="form2">
 	<form id="form4">
 	   
-	   
-         <label class="dolgu">Sport Type:</label>
+	  
+         <label  class="sportstype">Sport Type:</label>
          <select class="seçenek" name="sportstype" id="sportstype">
          <option>Football</option>
          <option>Basketball</option>
          <option>Voleyball</option>
          <option>Handball</option>
 		 </select>
-		 <label class="dolgu">Team Name:</label> <input type="text" name="teamname" id="teamname" />
+		 <label for="teamname" class="dolgu">Team Name:</label> <input type="text" name="teamname" id="teamname" />
 		 
 		 <input type="button" class="tus" value="Add" onclick="addTeam();"> 
 		 <br><br><br><br><br><br><br><br>
+		
 		
 		 
 	 
